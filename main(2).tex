@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[bottom=2.0cm,top=2.0cm,left=2.0cm,right=2.0cm]{geometry}
+
+
+\title{%
+  Estrutura da Matéria - Física Atômica \\
+  \large Instituto de Física - Universidade de Brasília}
+
+\author{Felipe Martins Goulart - 15/0153651}
+\date{Fevereiro 2021}
+
+\begin{document}
+
+
+\maketitle
+ \renewcommand{\theenumi}{\alph{enumi}}
+\section {Questão 3}
+ \begin{enumerate}
+    \item
+        Obtenha a correção para E1 quando a massa reduzida é levada em conta.
+            \begin{itemize}
+                \begin{equation}
+                    \begin{aligned}
+                        {&E_n = fator}\\
+                        {&E^{\infty}_{n} = 13,605 eV}\\
+                       \end{aligned}
+                \end{equation}
+                Utilizando o postulado de Bohr e considerando a massa do elétron atômico  ($m$) é infinitamente menor que a massa do núcleo atômico ($M$),a energia total é calculada pela equação
+                    \begin{equation}
+                        {E_n =\frac{-e^4 m_e}{2(4\pi\epsilon_0)^2 \hbar^2 n^2} }\\
+                    \end{equation}
+                    Calculando $E_1$, temos:
+                    \begin{equation}
+                        \begin{aligned}
+                            {&E_1 =\frac{-(9.10^9 \frac{Nm^2}{c^2})^2 . 9,11.10^{-31}Kg.(1,6.10^{-19}C)^4}{2(1,05.10^{-34}Js)^2} }\\
+                            {&E_1 = -2,17.10^{-18}J = -13,6 eV}\\
+                        \end{aligned}
+                    \end{equation}
+                Para a massa reduzida é necessário multiplicar pelo fator:
+                    \begin{equation}
+                        \begin{aligned}
+                        {\frac{1}{(1+\frac{m}{M})}}
+                        \end{aligned}
+                    \end{equation}
+                Onde $M$ é a massa do núcleo e $m$ a massa do elétron.
+                Utilizando a equação 2 multiplicado pelo fator (equação 4) , temos:
+                    \begin{equation}
+                        \begin{aligned}
+                        {E_n =\frac{-e^4 m_e}{2(4\pi\epsilon_0)^2 \hbar^2 n^2} . \frac{1}{(1+\frac{m}{M})} }\\
+                        \end{aligned}     
+                    \end{equation}
+                Com a equação 5, fazendo:
+                    \begin{equation}
+                        \begin{aligned}
+                        {&E_1 =\frac{-(1.6.10^{-19})^4.(9,11.10^{-31})}{2(4\pi.8,85.10^{-12})^2.(1,05.10^{-34})^2 . 1^2} . \frac{1}{(1+\frac{9,11.10^{-31}}{1,673.10^{-2}})} }\\
+                        {&E_1 = 2,1688 . 10^{-13}}
+                        \end{aligned}     
+                    \end{equation}
+            Portanto a correção é de aproximadamente 0,05\% do valor original.
+            \end{itemize}
+
+\end{enumerate}
+
+
+
+\end{document}

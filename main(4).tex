@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Mecânica de Lagrange}
+\author{Eduardo Ferreira, Felipe Goulart}
+\date{Setembro 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Disclaimer:}
+
+Este trabalho tem por finalidade uma breve apresentação e discussão sobre a Mecânica de Lagrange e alguns problemas relacionados. 
+
+O foco, entretanto, será no que foi aprendido durante o módulo 1 do curso de cálculo 3, a saber:
+\begin{enumerate}
+    \item Derivadas parciais;
+    \item Vetor gradiente (e uma citação à regra da cadeia);
+    \item Multiplicadores de Lagrange.
+\end{enumerate}
+
+\section{Introdução}
+
+A Mecânica de Lagrange, exposta em 1788 por Joseph-Louis Lagrange em seu livro Méchanique Analytique, é uma maneira de formular as leis que regem a mecânica clássica, alternativa ao formalismo newtoniano, por exemplo.
+
+Essa formulação combina a convervação do momento linear com a coservação da energia em um sistema de partículas. De fato, a Função de Lagrange é escrita como
+
+\begin{equation}
+    \mathcal{L}_{(q_i,\dot{q_i},t)}= T - U ,
+\end{equation}
+
+onde $q_i$ é um sistema de coordenadas generalizadas e $\dot{q_i}$ é a taxa de variação dessas coordenadas, $t$ é o tempo, $T$ é a energia cinética e $U$, a enrgia potencial generalizada.
+
+A Função de Lagrange (ou Lagrangeana) é o termo central de uma integral que define um termo chamado na física de funcional \textbf{ação} ($S$), um escalar associado ao movimento em um sistema dinâmico. Assim, Junto com o Princípio de Hamilton, que dita que a ação deve ser tomada como um valor fixo, seja ele de  \textit{máximo}, de \textit{mínimo} ou um \textit{ponto de sela}, a Mecânica de Lagrange define todo a dinâmica de um sistema sem ter que recorrer a uma formulação vetorial!
+
+\subsection{A Lagrangeana e o Princípio de Hamilton}
+
+Como dito, a Lagrangeana é o termo principal da ação $S$, que é definida como
+
+\begin{equation}
+    S \equiv \int_{t_i}^{t_f}  \mathcal{L}_{(q_i,\dot{q_i},t)} dt .
+\end{equation}
+
+O problema suposto no Princípio de Hamilton é o de encontrar funções que extremizem $S$, ou seja, funções de máximo, mínimo ou pontos de cela. Para tal, entretanto, é necessário o uso de técnicas de Cálculo Variacional, que não serão exploradas aqui.
+
+Porém, por esse método é possível chegar a uma conclusão interessante: uma suposição que se faz em relação à natureza é que todo corpo tende ao seu estado de menor energia. Mais específicamente, trata-se do "princípio de menor ação". Realmente, de acordo com o Principio de Hamilton, pode-se mostrar que de todas as trajetórias possíveis, a que implica um mínimo para a expressão de $S$ é a que implica, para todo i, que \newline
+
+$
+S=\int_{t_i}^{t_f}  \mathcal{L}_{(q_i,\dot{q_i},t)} dt = 0 ,
+$\newline
+
+A partir disso, são encontradas as equações de Euler-Lagrange, entre elas\newline
+
+\begin{equation}
+    \frac{\partial L}{\partial q_i} - \frac{d}{dt}(\frac{\partial L}{\partial \dot{q_i}
+    })=0
+\end{equation}
+
+usadas para encontrar os $q_i(t)$ procurados. Essas são \textit{equações diferenciais parciais}; equações de várias variáveis que utilizam das \textit{derivadas parciais} de funções.\newline
+\newline
+$\bullet$ A partir daqui serão analisados três temas relacionados ao assunto principal:
+
+\section{Mecânica de Lagrange e a conservação do momento linear}
+
+No seu livro Méchanique Analytique, publicado em 1788, Lagrange surpreende ao enunciar: "Não é possível localizar nenhum diagrama nessa publicação". O enunciado deixava claro que Lagrange estava prestes a propor uma resolução dos problemas de mecânica sem usar o formalismo vetorial utilizado por Newton, ou seja sem utilizar vetores e forças no sua resolução. A mecânica de Lagrange, como ficou conhecida, utiliza uma matemática sofisticada comparada a de Newton e se propõe a explicar a mecânica clássica combinando momento linear e conservação de energia.
+
+Os problemas mais complexos de mecânica, onde existem uma quantidade elevada de vetores e forças pra se levar em considerção, foi sempre um limitador na resolução dos problemas. Lagrange utiliza um formalismo escalar mais simples o que torna possível a resolução desses problemas mais complexos. Vamos fazer um estudo de como se desenvolve a aplicação da mecânica lagrangeana na conservação do momento linear. Para essa construção vamos imaginar um sistema homogêneo e conservativo, e que as coordenadas são apenas em função de uma única dimensão, representadas como:
+
+ \begin{equation}
+    \frac{\partial L}{\partial r}=0
+\end{equation}
+Como o nosso sistema imaginário é totalmente conservativo a perda de energia é igual a 0, então pelas equações de Euler-lagrange temos:
+ \begin{equation}
+    \frac{\partial}{\partial t} (\frac{\partial L}{\partial \dot{r}})=0
+\end{equation}
+Vamos chamar o movimento linear de uma partícula de $p$ e escreve-lo como:
+ \begin{equation}
+    {p} = \frac{\partial L}{\partial r}=0
+\end{equation}
+Se substituirmos na equação (5) teremos:
+ \begin{equation}
+    \frac{\partial p}{\partial t}=0
+\end{equation}
+Portanto o momento linear de uma partícula em um sistema conservativo não varia no tempo. A vantagem das equações de Langrange vem dessa maneira elegante de resolver problemas complexos, a lei de conservação a partir do espaço-tempo é um exemplo claro dessa sofisticação.
+\section{Princípio de D'Alambert}
+Jean Le Rond D'Alambert foi um matemático, físico e filósofo responsável por uma afirmação e um olhar sobre a mecânica que mudaria as ciências exatas. O que D'ALambert fez foi usar a noção de coordenadas generalizadas, como vimos anteriormente, e o conceito de deslocamentos virtuais para criar um modelo livre de interferências de outras forças. Dessa forma D'Alambert transforma um problema de dinâmica em um problema de estática criando uma Força de Inércia como artifício matemático, com isso ele introduz o conceito de Força virtual, que gerou descondância por parte da comunidade mas que matematicamente segue toda uma lógica e por isso é valida como as forças de campo. D'Alambert também introduz o conceito de Trabalho Virtual ${AW}$, que utilizaremos aqui para exemplificar o Princípio de D'Alambert, que matematicamente é feito em uma partícula de massa ${m_i}$ por deslocamento ${ \delta r_1}$, onde $a_i$ são acelerações das partículas $i=1, 2,...,n$, descrevemos como:
+\begin{equation}
+    \delta W = \sum_{i=1}^n (F_i - m_ia_i)\delta r_i = 0.
+\end{equation}
+Em coordenadas generalizadas
+\begin{equation}
+    \delta W = \sum_{j=1}^n\sum_{i=1}^n (F_i - m_ia_i)\frac{dr_i}{dq_j}\delta q_j = 0.
+\end{equation}
+A definição de uma força generalizada $Q_i$ aparece dividindo a equação acima por ${ \delta q_j}$
+\begin{equation}
+    Q_j = \frac{\delta W}{\delta q_j} = \sum_{i=1}^n F_i -\frac{dr_i}{dq_j}.
+\end{equation}
+Se as forças conservativas aparecem como $F_i$, existe um campo escalar potencial $V$ em que o gradiente de $V$ pode ser escrito como:
+\begin{equation}
+    F_i = - \nabla V =>  -\sum_{i=1}^n \nabla V \frac{dr_i}{dq_j} = - \frac{dr_V}{dq_j} .
+\end{equation}
+Por fim, fica claro que as forças generalizadas podem ser reduzidas para um gradiente de potencial em termos das coordenadas generalizadas. O resultado anterior é obtido considerando $V$ uma função de $r_i$, que por sua vez é funçao de $q-j$, aplicando a regra da cadeia para $\frac{dV}{dq_j}$.
+\section{Equações de Lagrange do Primeiro Tipo}
+
+Também se aplica à mecânica a utilização do método dos Multiplicadores de Lagrange. Podemos achar pontos críticos para um sistema sujeito à equação de restrição nas coordenadas generalizadas $F_{(r_1,r_2,r_3)}=k$. No caso, generalizamos o sistema de coordenadas como $q_i=r$, o que faz a Função de Lagrange ser do tipo $\mathcal{L}=\mathcal{L}_{(r,\dot{r},t)}$ e a equação de Euler-Lagrange citada anteriormente como
+
+\begin{equation}
+     \frac{\partial L}{\partial r_j} - \frac{d}{dt}(\frac{\partial L}{\partial \dot{r_j}
+    })=0
+\end{equation}
+
+
+Então, dada a restrição $F_{(r_1,r_2,r_3)}$, as Equações de Lagrange do primeiro Tipo são dadas por
+
+\begin{equation}
+   [\frac{\partial L}{\partial r} - \frac{d}{dt}(\frac{\partial L}{\partial \dot{r}
+    })] + \lambda \frac{\partial F}{\partial r_j} = 0 ,
+\end{equation}
+
+onde $\lambda$ é o multiplicadores de Lagrange.
+
+Na verdade, para cada restrição $F_1, F_2, ..., F_e$ há um multiplicador de Lagrange associado. Então, pode-se generalizar as Eq. de Lagrange do Primeiro Tipo como
+
+\begin{equation}
+    [\frac{\partial L}{\partial r} - \frac{d}{dt}(\frac{\partial L}{\partial \dot{r}
+    })] + \sum_{i=1}^e \lambda_i \frac{\partial F_i}{\partial r_j} = 0
+\end{equation}
+
+Enfim, a título de curiosidade, pode-se mostrar que a cada equação de restrição corresponde uma força de restrição conservativa (isso, claro, num sistema conservativo). Na demonstração, utiliza-se o fato de que, em sistemas conservativos,
+
+\begin{equation}
+    \vec{F_i} = -\vec{\nabla} V_i + N_i
+\end{equation}
+
+sendo $\nabla V_i$ o \textit{gradiente} de uma função escalar \textit{potencial}. Por fim, o resultado para as forças de restrição é 
+
+\begin{equation}
+    N_j = \sum_{i=1}^e \lambda_i \frac{\partial F_i}{\partial r_j} .
+\end{equation}
+
+\section{Referências}
+\begin{enumerate}
+    \item [1] Célius A. Magalhães, Navegue por belas paisagens do Cálculo, volume 3;
+    \item [2] Eliana X.L. Andrade, Cleonice F. Bracciali. Fraçõoes Contínuas: Propriedades e Aplicações, Notas em Matemática Aplicada, SBMAC, 2005.
+    \item [3] Stewart, James. Cálculo, Vol. 2, 7a edição. Editora Cengage Learning, 2013.
+    \item [4] Lemos, Nivaldo. Mecânica Analítica . Editora Livraria da Física, 2004.
+    \item [5] Wikipédia;
+\end{enumerate}
+
+\end{document}

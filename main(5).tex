@@ -1,0 +1,117 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[bottom=2.0cm,top=2.0cm,left=2.0cm,right=2.0cm]{geometry}
+\usepackage[portuges]{babel}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}		
+	\begin{figure}[htb!]
+			\begin{flushleft}
+			\includegraphics[width=3.9cm]{logo_unb}
+			\end{flushleft}
+\end{figure}
+        \vspace{-2.5cm}
+        \hspace{2.1cm}\Large{\textbf{Universidade de Brasília}}\\
+        \hspace{2.1cm}\Large{Cálculo 3-1/2020}\\
+        \vspace{200pt}
+        \LARGE{\textbf{Trabalho:}}\\ 
+        \Large{Contaminação Epidêmica}\\
+        \vspace{150pt}
+        \vspace{40pt}
+        \hfill Gabriella Magalhães\hspace{20pt}18/0120964\\
+        \hfill Pedro Derze\hspace{20pt}17/0163814  \\
+        \hfill Eduardo Ferreira \hspace{20pt}19/0026987\\
+        \hfill Felipe Goulart \hspace{20pt}15/0153651 
+       \vspace{\fill}
+
+	\end{center}
+\end{titlepage}
+\newpage
+\LARGE{\section{Introdução}}
+
+Nossa proposta é estudar a contaminação epidêmica de uma certa região.\newline
+
+Suponhamos que o local de interesse seja a região circular com um raio de $10Km$ onde, no centro, há o Hospital Regional da Asa Norte. Consideremos que os indivíduos que habitam essa região se distribuam uniformemente por ela e que a taxa de contaminação por certa doença seja de $k$ pessoas por $Km^2$. Consideremos ainda a função probabilidade, dada por\newline
+
+\begin{equation}
+    f(P)= \int\int_D \frac{k}{20}[20-d(P,A)]dxdy ,
+\end{equation}
+
+onde $d(P,A)$ é a distância entre $P$ e $A$, sendo $A$ um indivíduo não infectado no ponto $A(x_0,y_0)$. Neste caso, essa função mostra a probabilidade de um indivíduo ser infectado.\newline
+
+Nosso questionamento é: uma pessoa que mora no centro tem a mesma chance de contaminação que uma pessoa que mora na periferia? Ora! Agora que temos as ferramentas para essa resposta, vamos checar!\newpage
+
+\section{}
+Para uma pessoa que mora no centro, sua posição $A$ é $A=(0,0)$ e a função probabilidade é dada por\newline
+
+\begin{equation}
+    f(x,y)= \int\int_D \frac{k}{20}[20-\sqrt{x^2+y^2}]dxdy ,
+\end{equation}
+em que $D$ é o domínio do interior da área circular:\newline
+
+$D:\{ (x,y)\in \mathcal{R}^2 ; x^2+y^2\leq 10^2 \}$.\newline
+
+Essa integral fica mais simples se utilizarmos coordenadas polares. Adaptando o domínio para $\widehat{D}$, dado por\newline
+
+$\widehat{D}:\{ 0\leq r\leq 10; 0\leq \theta \leq 2\pi \}$,\newline
+
+temos que a integral $(2)$ fica como
+
+\begin{equation}
+    f(r,\theta)=\int_0^{2\pi}\int_0^{10}\frac{k}{20}[20-r]rdrd\theta,
+\end{equation}\newline
+que agora sim é uma integral sem grandes complicações.\newline
+Resolvendo-a, então, obtemos\newline
+
+$
+    f(r,\theta)=\frac{k}{20}2\pi\int_0^{10}(20r-r^2)dr = \frac{k\pi}{10}[10r^2-\frac{r^3}{3}]/_0^{10}=\frac{200k\pi}{3}\approx 209k
+$\newline
+
+Já para uma pessoa que mora na periferia, sua posição é dada por um ponto na circunferência, $A=(10,0)$, por exemplo. A função probabilidade seria, então, \newline
+
+$ f(x,y)= \int\int_D \frac{k}{20}[20-\sqrt{(x-10)^2+y^2}]dxdy$.\newline
+
+Essa integral, entretanto, é complicada de resolver.\newline
+Uma maneira conveninente de torná-la mais simples é transladar os eixos para que a origem seja em $A$ e escrevê-la em coordenadas polares, como na figura abaixo.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=15cm]{coordpol.png}
+\end{figure}
+
+O domínio $\widehat{D}$, então, seria $\widehat{D}:\{ \frac{-\pi}{2}\leq \theta \leq \frac{\pi}{2}; 0\leq r\leq 20cos\theta \}$. Assim, a função probabilidade fica\newline
+
+\begin{equation}
+    f(r,\theta)= \int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}\int_0^{20cos\theta}\frac{k}{20}[20-r]rdrd\theta
+\end{equation}\newline
+Resolvendo, por fim:\newline
+
+$
+    k\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}\int_0^{20cos\theta}[1-r/20]rdrd\theta=
+    k\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}[\frac{r^2}{2}-\frac{r^3}{60}]/_0^{20cos\theta}d\theta=\newline
+    k\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}(200cos^2\theta-\frac{400}{3}cos^3\theta)d\theta=200k(\frac{\theta}{2}+\frac{sen(2\theta)}{4}-\frac{2sen\theta}{3}+\frac{2}{3}.\frac{1}{3}sen^3\theta)/_{\frac{-\pi}{2}}^{\frac{\pi}{2}}=\newline
+    200k(\frac{\pi}{2}-\frac{8}{9})\approx136k.
+$\newline
+
+Dessa forma, podemos concluir que a probabilidade de contaminação em áreas periféricas é menor que em áreas centrais.\newpage
+
+Esse resultado se confirma quando analisamos dados da Covid-19 no Distrito Federal. A tabela abaixo mostra a incidência da doença a cada $100$ mil habitantes no mês de abril deste ano.\newline
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=15cm]{covid.jpeg}
+\end{figure}
+
+ \footnote{Reportagem completa em: https://glo.bo/34QTG6y}\newpage
+
+\section{Bibliografia}
+[1] Stewart, James. Cálculo 2, 6ª ed. Norte-Americana, Cencage Learning, São Paulo 2011; Página 940, exercício 33.
+
+\end{document}

@@ -1,0 +1,299 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Física Moderna Prova 2}
+\author{Felipe Martins Goulart - 150153651}
+\date{Novembro 2020}
+
+\begin{document}
+
+\maketitle
+
+\section {Questão 1}
+A massa é de ${m = 2.10^{-9}Kg}$, a velocidade é $v=1\frac{cm}{s}=10^{-2}\frac{m}{s}$.
+    Se:
+\begin{equation}
+    { p= mv}
+\end{equation}
+Substituindo
+\begin{equation}
+    { p= 2.10^{-9}Kg.10^{-2}\frac{m}{s} = 2.10^{-11}\frac{Kgm}{s}}
+\end{equation}
+Utilizando a equação (2) podemos encontrar:
+\begin{equation}
+    { {\Delta p} = m\Delta v =  0,01.2.10^{-11}\frac{Kgm}{s} = 2.10^{-13}\frac{Kgm}{s}}
+\end{equation}
+Sabendo que 
+\begin{equation}
+    {\Delta p \Delta x \geq \frac{\hbar}{2\pi}}
+\end{equation}
+    e
+\begin{equation}
+    {\hbar = \frac{h}{4\pi}}
+\end{equation}
+Portanto:
+\begin{equation}
+    {\Delta p \Delta x \geq \frac{h}{4\pi}}
+\end{equation}
+manipulando a equação (6) para isolar $\Delta x$ temos:
+\begin{equation}
+    {\Delta x \geq \frac{h}{4\pi\Delta p }}
+\end{equation}
+Substituindo na equação (7) os valores conhecidos até aqui, teremos:
+\begin{equation}
+    {\Delta x \geq \frac{6,6.10^{-34}}{4\pi 2.10^{-13} }\geq 2,62.10^{-22}m }
+\end{equation}
+Do resultado da equação (8) inferimos que a indeterminação mínima da posição é da ordem de grandeza de ${10^{-22}}$.
+
+
+
+\section {Questão 2}
+O comprimento de onda ($\lambda$) em metros é igual a $410,7.10^{-9}$m, com esse dado podemos utilizar a equação da velocidade de uma onda para encontrar a frequência ($\nu$), realizando a operação teremos:
+\begin{equation}
+    { \nu = \frac{c}{\lambda} = \frac{3.10^{8}}{410,7.10^{-9}} = 7,30.10^{14}Hz}
+\end{equation}
+Do quarto postulado de Bohr,de que a frequência de um radiação eletromagnética de um fóton é igual à energia carregada pelo fóton dividida pela constante de Planck, temos: 
+\begin{equation}
+    { \nu = \frac{E_i - E_f}{h}}  
+\end{equation}
+Sendo a energia total do elétron ($E$) descrita como:
+\begin{equation}
+    { E = (\frac{1}{4\pi\xi_0})^{2}\frac{mZ^{2}e^{4}}{2\hbar}\frac{1}{n^{2}}}  
+\end{equation}
+Sabendo que $\hbar = \frac{h}{2\pi}$ e $h=2\pi$, podemos substituir na equação (11), onde teremos a frequência da equação:
+
+\begin{equation}
+     { \nu = (\frac{1}{4\pi\xi_0})^{2}\frac{mZ^{2}e^{4}}{2\hbar^{3}}(\frac{1}{n_f^{2}}-\frac{1}
+     {n_i^{2}})}
+\end{equation}
+Para prosseguir é necessário isolar o $n_f$ e o $n_i$ na sua transição entre órbitas, então teremos:
+\begin{equation}
+     { (\frac{1}{n_f^{2}}-\frac{1}{n_i^{2}})=\frac{\nu}{ (\frac{1}{4\pi\xi_0})^{2}\frac{mZ^{2}e^{4}}{2\hbar^{3}}}}
+\end{equation}
+Substituindo pelos valores já conhecidos temos:
+\begin{equation}
+     { (\frac{1}{n_f^{2}}-\frac{1}{n_i^{2}})=\frac{7,30.10^{14}}{ (\frac{(9,0.10^{9})^{2}.(9,11.10^{-34}).1.(1,6.10^{-19})^{4}}{4\pi(1,05.10^{-34})^{3}})}}=\frac{7,30.10^{14}}{3,32.10^{15}}\approx 0,21
+\end{equation}
+Sabemos quanto de radiação a transição de $n_i\rightarrow n_f$, por fim é necessário encontrar os valores de $n_i$ e $n_f$ que satisfaça a equação (14). Repare que se utilizarmos $n_f$ igual a 2 teremos 0,5. Substituindo e trabalhando a equação (14) teremos o seguinte resultado:
+\begin{equation}
+     { (\frac{1}{2^{2}}-\frac{1}{5^{2}})\approx 0,21}
+\end{equation}
+O resultado nos diz que a transição de  ${n_i = 5}\rightarrow{n_f=2}$ e com comprimento de onda ${\lambda=410,7nm}$ produzem 0,21 de radiação.
+
+
+\section {Questão 3}
+a)Para ser uma solução aceitável da equação de Schroedinger é necessário que essa solução $\psi(x)$ e sua derivada $d\psi(x)/dx$ respeitem as seguintes condições
+\begin{enumerate}
+  \item $\psi(x)$  e $d\psi(x)/dx$ devem ser finitas.
+  \item $\psi(x)$  e $d\psi(x)/dx$ devem ser contínuas.
+  \item $\psi(x)$  e $d\psi(x)/dx$ devem ser unívocas.
+\end{enumerate}
+Logo do primeiro ponto sabemos que matematicamente para $d\psi(x)/dx$ ser finita, a $\psi(x)$ precisa necessariamente ser contínua, isso porque qualquer função sempre terá uma derivada primeira infinita onde for descontínua. As soluções não podem ser grandezas que abram margem para mais de uma interpretação. Desrespeitando essas condições não teríamos valores finitos e bem definidos. As equações diferenciais podem resultar em uma grande variedade de soluções, contudo as grandezas físicas não se comportam como sugerem algumas soluções, é necessário impor condições para limitar as soluções em um grupo de soluções fisicamente aceitáveis.\hfill \break
+
+b) 
+Para responder essa questão é necessário visitar um dos postulados enunciados por Max Born, assim segue:\hfill \break
+
+\textit{
+``Se, no instante t, é feita uma medida da localização da partícula associada à função de onda $\psi(x,t)$, então a probabilidade $P(x,t)dx$ de que a partícula seja encontrada em uma coordenada entre $x$ e $x + dx$ é igual a $\psi*(x,t)\psi(x,t)dx$."}
+\hfill \break
+
+Por esse postulado podemos desenvolver a  ligação entre as propriedades da função de onda $\psi(x,t)$ e o comportamento da partícula associada que é expressa pela densidade de probabilidade $P(x,t)$. Densidade de probabilidade é a grandeza que espcifica a probabilidade de encontrar uma partícula próxima de uma coordenada $x$ no instante $t$. 
+\hfill \break
+Na propagação de uma onda, a partícula deve estar em um ponto no espaço onde a função de função de onda $\psi(x,t)$ tenha uma amplitude considerável. Portanto existe uma probabilidade  considerável de encontrar a partícula naquele ponto onde a função de onda também tem valor considerável. Ainda assim não seria possível igualar essas grandezas visto que uma probabilidade só pode ser positiva e real, já a função de onda $\psi(x,t)$ é complexa pode admitir valores fora desse domínio, porém a função complexa pode ser escrita na forma: 
+\begin{equation}
+    {\psi(x,t) = A(x,t) +iB(x,t)}
+\end{equation}
+Onde A e B são funções reais, onde A é a parte real da função $\psi(x,t)$ e B a parte imaginária. O complexo conjugado da função de onda é escrito como:
+\begin{equation}
+    {\psi*(x,t) = A(x,t) - iB(x,t)}
+\end{equation}
+Multiplicando a função (16) pela (17) temos
+\begin{equation}
+    {\psi*(x,t)\psi(x,t) = (A - iB)(A+iB) = A^{2} -i^{2}B^{2}= A^{2} + B^{2}}
+\end{equation}
+\begin{equation}
+    {\psi*(x,t)\psi(x,t)=|A(x,t)|^{2} + |B(x,t)|^{2}}
+\end{equation}
+A equação (19) só pode ser real, positiva ou nula e agora é possível igualar a densidade de probabilidade com 
+\begin{equation}
+    {P(x,t)dx = \psi*(x,t)\psi(x,t)}
+\end{equation}
+
+Todo esse desenvolvimento para dizer que fisicamente não podemos dizer que uma partícula em um dado estado de energia se encontra em uma posição precisa em um certo tempo $t$, o que podemos calcular é a probabilidade da partícula estar em uma ou mais posições em um determinado tempo $t$.
+
+c) O caso estacionário é aquele no qual a amplitude de probabilidade $\psi(x,t)$ tem a forma
+\begin{equation}
+    {\psi(x,t) = u(x)e^{-\frac{i}{\hbar}Et}}
+\end{equation}
+\begin{equation}
+    {\rho = \psi^{*}\psi = u^{*}(x)e^{+\frac{i}{\hbar}Et}u(x)e^{-\frac{i}{\hbar}Et}}
+\end{equation}
+\begin{equation}
+    {\rho = \psi^{*}\psi = u^{*}(x)u(x)}
+\end{equation}
+A densidade de probabilidade só depende da posição, isso significa que ela é independente do tempo.
+\begin{equation}
+    {\frac{\partial \rho}{\partial t} = 0}
+\end{equation}
+Pela equação (24) podemos inferir que a probabilidade se conserva no caso estacionário. 
+\section {Questão 4}
+a)O momento da partícula quantizada confinada na caixa é
+\begin{equation}
+    {\rho = -i\hbar \frac{\partial}{\partial x}\left[ \psi(x,t)  \right]}
+\end{equation}
+A energia quantizada é
+\begin{equation}
+    {E = -i\hbar \frac{\partial}{\partial t}\left[ \psi(x,t)  \right]}
+\end{equation}
+Dado $\psi (x,t) = \sqrt{\frac{2}{L}}sen(K_n x)e^{-\frac{i}{\hbar}E_n t}$. Fazendo as derivadas parciais temos
+
+\begin{equation}
+    {\frac{\partial}{\partial x}\psi (x,t) = \sqrt{\frac{2}{L}}cos(K_n x)e^{-\frac{i}{\hbar}E_n t}}
+\end{equation}
+e
+\begin{equation}
+    {\frac{\partial}{\partial t}\psi (x,t) = \sqrt{\frac{2}{L}}sen(K_n x)(-\frac{i}{\hbar}E_n)e^{-\frac{i}{\hbar}E_n t}}
+\end{equation}
+Utilizando ainda a equação $KL = \eta \pi$ para cada $n=1,2,3,...$, podemos isolar $K$ e então obtemos
+\begin{equation}
+    {K_n = \frac{\eta \pi}{L}}
+\end{equation}
+O momento pode ser escrito como
+\begin{equation}
+    {\rho = \hbar K}
+\end{equation}
+Substituindo o $k$ na equação (30) do momento, temos
+\begin{equation}
+    {\rho = \hbar K = \frac{\hbar \eta \pi}{L}}
+\end{equation}
+A energia também pode ser escrita como
+\begin{equation}
+    {E_n = \frac{\rho ^{2}}{2m}}
+\end{equation}
+Fazendo a substituição da equação (31) na equação (32)
+\begin{equation}
+    {E_n = \frac{\rho ^{2}}{2m} = \frac{\hbar^{2}\eta^{2}\pi ^{2}}{2mL^{2}}}
+\end{equation}
+Com as expressões (25) e (26) substituindo pelas derivadas parciais de $\psi$ expressas em (27) e (28), substituindo também as funções equivalentes as expressões (31) e (33)  podemos encontrar expressão da energia ($E$) e do momento linear da partícula ($\rho$), dados respectivamente por
+\begin{equation}
+    {E =  \sqrt{\frac{2}{L}}sen(\frac{ \eta \pi x}{L})\frac{\hbar^{2}\eta^{2}\pi^{2}}{2mL^{2}}e^{\frac{-i\hbar\eta^{2}\pi ^{2}}{mL^{2}}}}
+\end{equation}
+
+\begin{equation}
+    {\rho = -i\hbar \left[\sqrt{\frac{2}{L}}(\frac{ \eta \pi}{L})cos(\frac{ \eta \pi}{L})e^{\frac{-i\hbar\eta^{2}\pi ^{2}}{2mL^{2}}}\right]}
+\end{equation}
+\hfill \break
+b) O estado fundamental é o estado com menor energia possível e onde $n=1$, portanto 
+\begin{equation}
+    {|\Phi(x,t)|^{2} = \frac{2}{L}Sen^{2}(x)}
+\end{equation}
+\begin{equation}
+    {|\Phi(x,t)|^{2} = \frac{2}{L} \int_0^{\frac{L}{4}}  Sen^{2}(x)dx}
+\end{equation}
+Como $KL = n\pi$ no caso de $n=1$ então $L=\pi$, substituindo o valor de L e fazendo a integral temos
+\begin{equation}
+    {|\Phi(x,t)|^{2} = \frac{2}{\pi} \left(\frac{1}{2} \left[ x - \frac{1}{2} sen(2x) \right]\Big|_0^{\frac{\pi}{4}} \right)}
+\end{equation}
+
+\begin{equation}
+    {|\Phi(x,t)|^{2} = \left[ \frac{\pi}{4}  - \frac{1}{2} sen(\frac{\pi}{2}) \right] - 0 = \frac{1}{4} - \frac{1}{2\pi}}
+\end{equation}
+Logo a probabilidade é 
+\begin{equation}
+    {Prob = \Big|_0^{\frac{L}{4}} = 9,08 \%}
+\end{equation}
+c) Para a energia temos 
+\begin{equation}
+    {E \Psi(x)  =  \frac{-\hbar^{2}}{2n}\frac{d^{2}\Psi (x)}{dx^{2}}}
+\end{equation}
+Substituindo temos
+\begin{equation}
+    {E \sqrt(\frac{2}{L})(sen(Kx) e^{ \frac{-i}{\hbar}E_n t} =  \frac{-\hbar^{2}}{2n}\sqrt(\frac{2}{L})K_n^{2}(-sen(K_n x) e^{ \frac{-i}{\hbar}E_n t}}
+\end{equation}
+Como a Energia para valores de n é 
+\begin{equation}
+    {E_n = \frac{\hbar^{2}K_n^{2}}{2m} }
+\end{equation}
+\begin{equation}
+    {\hbar = \frac{h}{2\pi} }
+\end{equation}
+Como $n = 2$, fazendo as devidas substituições temos
+\begin{equation}
+    {E_2 = \frac{h^{2}n^{2}}{8mL^{2}}}
+\end{equation}
+\begin{equation}
+    {E_2 = \frac{h^{2}4}{8mL^{2}} = \frac{h^{2}}{2mL^{2}} }
+\end{equation}
+O valor esperado da partícula nesse estado é 
+\begin{equation}
+    {<x> =  \int_{-\infty}^{\infty}  \Psi^{*} \Psi dx = \int_{-\infty}^{\infty}  \frac{2}{L} sen^{2}(K_n x) dx }
+\end{equation}
+\begin{equation}
+    {<x> =  \left[ \frac{-2\frac{2\pi}{L} (sen(2\frac{2\pi}{L}x) - \frac{2\pi}{L}x) + cos(2\frac{2\pi}{L}x))}{8 (\frac{2\pi}{L})^{2}}) \right]_0^L}
+\end{equation}
+\begin{equation}
+    {<x> = \frac{L}{2} }
+\end{equation}
+
+
+\section {Questão 5}
+a)Na primeira região temos que $V(x) = 0$ logo
+\begin{equation}
+    {-\frac{\hbar^{2}}{2m} \frac{d^{2}\Phi_{I}}{dx^{2}} = E\Phi_{I}}
+\end{equation}
+Como
+\begin{equation}
+    {E = \frac{P}{2m} +V_I (x)}
+\end{equation}
+\begin{equation}
+    {P = \sqrt{2mE}}
+\end{equation}
+Portanto 
+\begin{equation}
+    {\Phi_{I}(x) = A exp\left(\frac{ipx}{\hbar}\right) + B exp\left(\frac{-ipx}{\hbar}\right)} 
+\end{equation}
+
+A equação de Schrodinger para $E<V_0$ na segunda região é
+\begin{equation}
+    {-\frac{\hbar^{2}}{2m} \frac{d^{2}\Phi_{II}}{dx^{2}} + V_o\Phi_{II}= E\Phi_{II}}
+\end{equation}
+A solução então se desenvolve 
+\begin{equation}
+    {\Phi_{II} = e^{\alpha x}}
+\end{equation}
+\begin{equation}
+    {-\frac{\hbar^{2}}{2m} \alpha ^{2}e^{\alpha x} + V_o e^{\alpha x}= E e^{\alpha x}}
+\end{equation}
+\begin{equation}
+    {-\frac{\hbar^{2}}{2m} \alpha ^{2}= E - V_0}
+\end{equation}
+\begin{equation}
+    {\alpha ^{2}= \frac{2m(E - V_0)}{\hbar ^{2}}}
+\end{equation}
+\begin{equation}
+    {\alpha = \SI{\pm} \frac{\sqrt{2m(V_0 - E)}}{\hbar}} 
+\end{equation}
+Portanto 
+\begin{equation}
+    {\Phi_{II}(x) = C exp\left(\alpha x \right) + D exp\left(- \alpha x \right)}
+\end{equation}
+Para manter dentro das possibilidades finitas só a exponencial negativa funcionaria, C só poderá ser igual a 0, logo temos
+\begin{equation}
+    {\Phi(x) =D e^{- \alpha x }}
+\end{equation}
+b) Se $A + B = C + D$, sendo C igual a zero, logo $A + B = D$, ou seja
+\begin{equation}
+    {\frac{d\Phi}{dx}\Big|_{x=0}  = \frac{d\Phi_{II}}{dx}\Big|_{x=0}}
+\end{equation}
+\begin{equation}
+    {\frac{ip}{\hbar}A C e^{\frac{ipx}{\hbar}} - \frac{ip}{\hbar} C e^{\frac{-ipx}{\hbar}} = -\alpha D e^{-\alpha x}}
+\end{equation}
+onde
+\begin{equation}
+    {\alpha =\sqrt{\frac{(V_0 - E)2m}{\hbar}}}
+\end{equation}
+e
+\begin{equation}
+    {p =\sqrt{2mE}}
+\end{equation}
+\end{document}
